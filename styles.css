@@ -1,0 +1,297 @@
+/* ---------- Base: element selectors ---------- */
+/* Palette: slate ink #1d2b3a, soft blue accent #3a6ea5, cool off-white #f5f7fa, white #ffffff, mist #dde4ec */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f7fa;
+  color: #1d2b3a;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: "Spectral", Georgia, serif;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 1.9rem; margin-bottom: 1.25rem; }
+h3 { font-size: 1.2rem; }
+
+p {
+  margin: 0 0 0.75rem;
+  max-width: 65ch;
+}
+
+a {
+  color: #3a6ea5;
+}
+
+a:hover {
+  color: #1d2b3a;
+}
+
+a:focus-visible {
+  outline: 3px solid #3a6ea5;
+  outline-offset: 3px;
+}
+
+/* ---------- Navigation bar: ID + flexbox + position ---------- */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dde4ec;
+}
+
+#navbar .brand {
+  font-family: "Spectral", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1d2b3a;
+  text-decoration: none;
+}
+
+#navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#navbar ul a {
+  color: #1d2b3a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+#navbar ul a:hover {
+  color: #3a6ea5;
+  border-bottom-color: #3a6ea5;
+}
+
+/* ---------- Header / hero ---------- */
+#top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 3rem;
+}
+
+.profile-photo {
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  outline: 2px solid #3a6ea5;
+}
+
+.intro {
+  flex: 1;
+  min-width: 18rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #4a5b6d;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Buttons: class selectors + display ---------- */
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  margin: 0 0.5rem 0.5rem 0;
+  background-color: #3a6ea5;
+  color: #ffffff;
+  border: 2px solid #3a6ea5;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #1d2b3a;
+  border-color: #1d2b3a;
+  color: #ffffff;
+}
+
+.button.outline {
+  background-color: transparent;
+  color: #3a6ea5;
+}
+
+.button.outline:hover {
+  background-color: #1d2b3a;
+  color: #ffffff;
+}
+
+/* ---------- Sections ---------- */
+main section {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  border-top: 1px solid #dde4ec;
+}
+
+/* ---------- Education timeline: position + pseudo-element ---------- */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  list-style: none;
+  border-left: 3px solid #dde4ec;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -2.7rem;
+  top: 0.4rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #3a6ea5;
+  border: 3px solid #f5f7fa;
+  border-radius: 50%;
+}
+
+.timeline h3 {
+  margin-bottom: 0;
+}
+
+.years {
+  color: #4a5b6d;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ---------- Leadership roles ---------- */
+.role {
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #3a6ea5;
+}
+
+/* ---------- Project cards: flexbox + box model ---------- */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 16rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #dde4ec;
+  border-top: 5px solid #3a6ea5;
+  border-radius: 2px 2px 14px 2px;
+}
+
+.card:hover {
+  border-color: #3a6ea5;
+}
+
+.tools {
+  font-size: 0.9rem;
+  color: #4a5b6d;
+}
+
+/* ---------- Skills as tags: inline-block ---------- */
+.tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  display: inline-block;
+  margin: 0 0.5rem 0.6rem 0;
+  padding: 0.4rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid #3a6ea5;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+/* ---------- Achievements table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #dde4ec;
+}
+
+th {
+  background-color: #1d2b3a;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f7fa;
+}
+
+tbody tr:hover {
+  background-color: #e8eef5;
+}
+
+/* ---------- Footer / contact: ID selector ---------- */
+#contact {
+  margin-top: 2rem;
+  padding: 3rem 2rem;
+  background-color: #1d2b3a;
+  color: #ffffff;
+  text-align: center;
+}
+
+#contact p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact a {
+  color: #a9c7e8;
+}
+
+#contact a:hover {
+  color: #ffffff;
+}
