@@ -677,3 +677,118 @@ body[data-theme="ocean"] #top { background-image: linear-gradient(135deg, #1c9bf
 
 body[data-theme="forest"] { --violet: #0f8a60; --violet-s: #d4f5e6; }
 body[data-theme="forest"] #top { background-image: linear-gradient(135deg, #1fbf8a 0%, #0a5c43 100%); }
+
+/* =====================================================
+   Figures: shapes, badge, number cards, heading icons
+   ===================================================== */
+
+/* floating shapes in the header (clip-path draws the star and triangle) */
+.shape {
+  position: absolute;
+  z-index: 0;
+  animation: float 7s ease-in-out infinite;
+}
+
+.star {
+  top: 2.2rem;
+  left: 6%;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #ff5c7a;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation-delay: 0.5s;
+}
+
+.triangle {
+  right: 12%;
+  bottom: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #19c3a0;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  animation-delay: 2s;
+}
+
+.squiggle {
+  top: 38%;
+  right: 4%;
+  width: 7rem;
+  height: auto;
+  animation-delay: 1s;
+}
+
+/* greeting sticker on the photo: click it to change the language */
+.photo-wrap { position: relative; }
+
+.badge {
+  position: absolute;
+  top: -0.4rem;
+  right: -1.4rem;
+  padding: 0.4rem 1rem;
+  background-color: #ffc531;
+  color: #1f1740;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #1f1740;
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 #1f1740;
+  transform: rotate(10deg);
+  animation: wiggle 2.5s ease-in-out infinite;
+}
+
+.badge:hover { background-color: #ffffff; }
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(10deg); }
+  50% { transform: rotate(-4deg); }
+}
+
+/* number cards in the About section (numbers count up via script.js) */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  flex: 1;
+  min-width: 9rem;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  background-color: var(--sun-s);
+  border: 2px solid var(--edge);
+  border-radius: 14px;
+  box-shadow: 5px 5px 0 var(--shade);
+  transition: transform 0.2s;
+}
+
+.stat:nth-child(2) { background-color: var(--mint-s); }
+.stat:nth-child(3) { background-color: var(--coral-s); }
+.stat:nth-child(4) { background-color: var(--sky-s); }
+.stat:hover { transform: translateY(-6px) rotate(-2deg); }
+
+.num {
+  display: block;
+  font-family: "Spectral", Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stat p {
+  margin: 0 auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* small icon before each section heading */
+#about h2::before { content: "\2728  "; }
+#education h2::before { content: "\1F393  "; }
+#leadership h2::before { content: "\1F31F  "; }
+#projects h2::before { content: "\1F680  "; }
+#skills h2::before { content: "\26A1  "; }
+#achievements h2::before { content: "\1F3C6  "; }
+#contact h2::before { content: "\1F48C  "; }
