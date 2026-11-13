@@ -8,8 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Spectral:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.className = "js";</script>
 </head>
 <body>
+
+  <div class="progress" id="progress"></div>
 
   <nav id="navbar">
     <a class="brand" href="#top">Jiya Jain</a>
@@ -30,13 +33,16 @@
     <div class="hero-inner">
     <img class="profile-photo" src="images/jiya.jpg" alt="Portrait of Jiya Jain">
     <div class="intro">
+      <p class="hello">Hi there, I'm</p>
       <h1>Jiya Jain</h1>
-      <p class="tagline">Student at IIM Bangalore &amp; Masters' Union | Psychology, Marketing &amp; Digital Entrepreneurship | Aspiring Entrepreneur</p>
+      <p class="tagline"><span>Student at IIM Bangalore &amp; Masters' Union</span><span>Psychology, Marketing &amp; Digital Entrepreneurship</span><span>Aspiring Entrepreneur</span></p>
       <a class="button" href="#contact">Get in touch</a>
       <a class="button outline" href="https://www.linkedin.com/in/jiya-jain-291147310">View LinkedIn</a>
     </div>
     </div>
   </header>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Entrepreneurship</span><span>Psychology</span><span>Marketing</span><span>Consumer Behaviour</span><span>Technology</span><span>Innovation</span><span>Social Impact</span><span>Leadership</span><span>Entrepreneurship</span><span>Psychology</span><span>Marketing</span><span>Consumer Behaviour</span><span>Technology</span><span>Innovation</span><span>Social Impact</span><span>Leadership</span></div></div>
 
   <main>
 
@@ -182,7 +188,9 @@
     <p>LinkedIn: <a href="https://www.linkedin.com/in/jiya-jain-291147310">linkedin.com/in/jiya-jain-291147310</a></p>
   </footer>
 
+  <button class="palette" id="palette" type="button">Change colours</button>
   <a class="to-top" href="#top" aria-label="Back to top">Top</a>
 
+  <script src="script.js"></script>
 </body>
 </html>
