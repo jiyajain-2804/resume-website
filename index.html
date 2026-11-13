@@ -22,15 +22,19 @@
       <li><a href="#achievements">Achievements</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <input type="checkbox" id="theme" class="theme-input">
+    <label for="theme" class="theme-switch">Dark mode</label>
   </nav>
 
   <header id="top">
+    <div class="hero-inner">
     <img class="profile-photo" src="images/jiya.jpg" alt="Portrait of Jiya Jain">
     <div class="intro">
       <h1>Jiya Jain</h1>
       <p class="tagline">Student at IIM Bangalore &amp; Masters' Union | Psychology, Marketing &amp; Digital Entrepreneurship | Aspiring Entrepreneur</p>
       <a class="button" href="#contact">Get in touch</a>
       <a class="button outline" href="https://www.linkedin.com/in/jiya-jain-291147310">View LinkedIn</a>
+    </div>
     </div>
   </header>
 
@@ -70,26 +74,27 @@
 
     <section id="leadership">
       <h2>Leadership, experience and entrepreneurship</h2>
+      <p class="hint">Click a role to open or close it.</p>
 
-      <article class="role">
-        <h3>Founder, Jain Youth Wing</h3>
+      <details class="role" open>
+        <summary>Founder, Jain Youth Wing</summary>
         <p>Established a youth initiative under Akhil Bharatiya Jain Shwetamber Mahila Sangh, organising cultural, personal development and community service activities.</p>
-      </article>
+      </details>
 
-      <article class="role">
-        <h3>Round Square Service Pillar Prefect, The Daly College</h3>
+      <details class="role">
+        <summary>Round Square Service Pillar Prefect, The Daly College</summary>
         <p>Led school service initiatives, including book drives, sustainability projects, fundraising and cancer awareness programmes with the Indore Cancer Foundation.</p>
-      </article>
+      </details>
 
-      <article class="role">
-        <h3>IPSC Round Square Conference, Dehradun</h3>
+      <details class="role">
+        <summary>IPSC Round Square Conference, Dehradun</summary>
         <p>Represented school in service initiatives involving sustainability, reusable sanitary pads, solar lamps and social awareness.</p>
-      </article>
+      </details>
 
-      <article class="role">
-        <h3>Entrepreneurship, Masters' Union</h3>
+      <details class="role">
+        <summary>Entrepreneurship, Masters' Union</summary>
         <p>Participated in hands-on startup challenges, co-founded a ceramic mug and cup brand, and secured 3rd position in the Certification in Entrepreneurship Program.</p>
-      </article>
+      </details>
     </section>
 
     <section id="projects">
@@ -176,6 +181,8 @@
     <p>Email: <a href="mailto:jiyaj126@iimb.ac.in">jiyaj126@iimb.ac.in</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/jiya-jain-291147310">linkedin.com/in/jiya-jain-291147310</a></p>
   </footer>
+
+  <a class="to-top" href="#top" aria-label="Back to top">Top</a>
 
 </body>
 </html>
