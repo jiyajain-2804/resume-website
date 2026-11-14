@@ -23,7 +23,7 @@ sections.forEach(function (section) {
   observer.observe(section);
 });
 
-// 3. Colour theme button: each click switches to the next colour theme
+// 3. Change colours button: each click switches to the next colour theme
 var themes = ["violet", "sunset", "ocean", "forest"];
 var current = 0;
 var paletteButton = document.getElementById("palette");
